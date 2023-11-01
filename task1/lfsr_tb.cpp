@@ -37,8 +37,8 @@ int main(int argc, char **argv, char **env)
 
         top -> rst = (symcyc < 2);
         top-> en = vbdFlag();
-        vbdHex(1, top -> data_out & 0xF);
-        vbdBar(top->data_out & 0xFF);
+        vbdHex(1, int(top -> data_out) & 0xF);
+        vbdBar(top->data_out& 0xFF);
         if((Verilated:: gotFinish()) || (vbdGetkey()== 'q')) exit(0);
 
     }

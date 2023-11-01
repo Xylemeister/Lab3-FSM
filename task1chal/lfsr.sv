@@ -2,16 +2,16 @@ module lfsr (
     input logic clk,
     input logic en,
     input logic rst,
-    output logic [4:1] data_out
+    output logic [7:1] data_out
 );
 
-    logic [3:0] sreg;
+    logic [7:1] sreg;
 
     always_ff @(posedge clk, posedge rst) 
     if(rst) 
-        sreg <= 4'b1;
+        sreg <= 7'b1;
     else if (en)
-        sreg <= {sreg[2:0], sreg[4] ^ sreg[3]};
+        sreg <= {sreg[6:1], sreg[7] ^ sreg[3]};
     assign data_out = sreg;
     
     

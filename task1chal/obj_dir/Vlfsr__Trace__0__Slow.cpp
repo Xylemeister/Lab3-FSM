@@ -14,13 +14,13 @@ VL_ATTR_COLD void Vlfsr___024root__trace_init_sub__TOP__0(Vlfsr___024root* vlSel
     tracep->declBit(c+1,"clk", false,-1);
     tracep->declBit(c+2,"en", false,-1);
     tracep->declBit(c+3,"rst", false,-1);
-    tracep->declBus(c+4,"data_out", false,-1, 4,1);
+    tracep->declBus(c+4,"data_out", false,-1, 7,1);
     tracep->pushNamePrefix("lfsr ");
     tracep->declBit(c+1,"clk", false,-1);
     tracep->declBit(c+2,"en", false,-1);
     tracep->declBit(c+3,"rst", false,-1);
-    tracep->declBus(c+4,"data_out", false,-1, 4,1);
-    tracep->declBus(c+5,"sreg", false,-1, 4,1);
+    tracep->declBus(c+4,"data_out", false,-1, 7,1);
+    tracep->declBus(c+5,"sreg", false,-1, 7,1);
     tracep->popNamePrefix(1);
 }
 
@@ -67,6 +67,6 @@ VL_ATTR_COLD void Vlfsr___024root__trace_full_sub_0(Vlfsr___024root* vlSelf, Ver
     bufp->fullBit(oldp+1,(vlSelf->clk));
     bufp->fullBit(oldp+2,(vlSelf->en));
     bufp->fullBit(oldp+3,(vlSelf->rst));
-    bufp->fullCData(oldp+4,(vlSelf->data_out),4);
-    bufp->fullCData(oldp+5,(vlSelf->lfsr__DOT__sreg),4);
+    bufp->fullCData(oldp+4,(vlSelf->data_out),7);
+    bufp->fullCData(oldp+5,(vlSelf->lfsr__DOT__sreg),7);
 }
